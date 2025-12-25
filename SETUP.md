@@ -8,24 +8,10 @@
 pip install -r requirements.txt
 ```
 
-### 2. Download the Translation Model and necessary Files
-https://huggingface.co/facebook/nllb-200-distilled-600M/tree/main
-(No need for readme and gitattributes)
-
-### 3. Run the Application
-
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at `http://localhost:8501`
-
----
-
 ## 📁 Project Structure
-
+Create a new folder nllb_model/ in the root directory(KLDT) where the model and required files that you download should be. They are too large to be pushed and pulled by git
 ```
-your_project/
+KLDT/
 ├── app.py                      # Main Streamlit app
 ├── requirements.txt            # Python dependencies
 ├── .gitignore                 # Git ignore file
@@ -46,9 +32,21 @@ your_project/
 │   └── ui_main.py
 └── config/
     └── languages.py
+
+
+### 2. Download the Translation Model and necessary Files
+Requires strong internet.
+No need for readme.MD and .gitattributes. Download all the rest
+
+https://huggingface.co/facebook/nllb-200-distilled-600M/tree/main
+
+### 3. Run the Application
+
+```bash
+streamlit run app.py
 ```
 
----
+The app will open in your browser at `http://localhost:8501`
 
 ## ⚠️ Important Notes
 
