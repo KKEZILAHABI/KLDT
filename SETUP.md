@@ -32,16 +32,18 @@ KLDT/
 │   └── ui_main.py
 └── config/
     └── languages.py
+```
 
+### 2. Download the Translation Model and necessary Files 
 
-### 2. Download the Translation Model and necessary Files
 Requires strong internet.
-No need for readme.MD and .gitattributes. Download all the rest
-
+No need for readme.MD and .gitattributes. 
+Download all the rest
+```
 https://huggingface.co/facebook/nllb-200-distilled-600M/tree/main
+```
 
 ### 3. Run the Application
-
 ```bash
 streamlit run app.py
 ```
