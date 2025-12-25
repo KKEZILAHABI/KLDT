@@ -1,0 +1,36 @@
+{
+  "greetings": [
+    {
+      "english": "Hello",
+      "swahili": "Hujambo",
+      "luo": "Misawa", 
+      "kikuyu": "Wendo"
+    },
+    {
+      "english": "Good morning",
+      "swahili": "Habari za asubuhi",
+      "luo": "Oyawore",
+      "kikuyu": "Wendo wa rũcinĩ"
+    },
+     {
+      "english": "Good evening",
+      "swahili": "Habari za jioni",
+      "luo": "Oimore",
+      "kikuyu": " "
+    }
+  ],
+  "common": [
+    {
+      "english": "Thank you",
+      "swahili": "Asante",
+      "luo": "Erokamano",
+      "kikuyu": "Ni wega"
+    },
+    {
+      "english": "How are you?",
+      "swahili": "Habari yako?",
+      "luo": "Idhi nade?",
+      "kikuyu": "ũrĩ atĩa?"
+    }
+  ]
+}
