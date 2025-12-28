@@ -39,12 +39,12 @@ def render_chat(translator, source_lang, target_lang, voice_service):
             if message.get("translation"):
                 st.caption(f"→ {message['translation']}")
                 
-                # Add speaker button for translations
+                # Add speaker button for voice output (on-demand, not auto-play)
                 if voice_service.is_enabled() and message["role"] == "assistant":
                     if st.button(
-                        "🔊 Play", 
+                        "🔊 Listen", 
                         key=f"speak_{message.get('id', 0)}",
-                        help="Listen to translation"
+                        help="Click to hear pronunciation"
                     ):
                         voice_service.speak(
                             message['translation'], 
@@ -86,9 +86,5 @@ def render_chat(translator, source_lang, target_lang, voice_service):
             "id": msg_id + 1
         })
         
-        # Auto-speak translation if voice enabled
-        if voice_service.is_enabled():
-            voice_service.speak(translation, target_lang)
-        
-        # Rerun to update UI
+        # Rerun to update UI (removed auto-speak - user can click speaker button if they want to hear pronunciation)
         st.rerun()
