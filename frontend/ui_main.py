@@ -17,8 +17,21 @@ def render_main_ui(translator, voice_service):
         render_quick_phrases(translator, source_lang, target_lang)
         
         st.divider()
-        if st.button("🗣️ Enable Voice", help="Enable microphone input"):
-            voice_service.enable()
+        
+        # Voice settings
+        st.subheader("Voice Settings")
+        if voice_service.is_enabled():
+            st.success("🎤 Voice features: **Enabled**")
+            if st.button("🔇 Disable Voice", help="Disable voice features"):
+                voice_service.disable()
+                st.rerun()
+        else:
+            st.info("🎤 Voice features: **Disabled**")
+            if st.button("🗣️ Enable Voice", help="Enable microphone input"):
+                voice_service.enable()
+                st.rerun()
+        
+        st.divider()
         if st.button("🗑️ Clear Chat"):
             st.session_state.messages = []
     

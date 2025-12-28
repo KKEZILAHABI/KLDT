@@ -21,19 +21,42 @@ class NLLBTranslator:
         print("[INFO] Loading NLLB model from local directory...")
         
         try:
+            # Always load to CPU first to avoid meta tensor issues
+            # We'll move to GPU later if needed and possible
+            self.device = "cpu"
+            
             # Load tokenizer and model from local directory
             self.tokenizer = AutoTokenizer.from_pretrained(
                 self.model_dir,
                 local_files_only=True
             )
+            
+            # Load model to CPU explicitly to avoid meta tensor issues
+            # Don't specify torch_dtype to let it use default, which avoids meta tensor issues
             self.model = AutoModelForSeq2SeqLM.from_pretrained(
                 self.model_dir,
-                local_files_only=True
+                local_files_only=True,
+                low_cpu_mem_usage=False
             )
             
-            # Use GPU if available
-            self.device = "cuda" if torch.cuda.is_available() else "cpu"
-            self.model.to(self.device)
+            # Set to evaluation mode before any device movement
+            self.model.eval()
+            
+            # Try to move to GPU if available (only after successful CPU load)
+            if torch.cuda.is_available():
+                try:
+                    self.model = self.model.to("cuda")
+                    self.device = "cuda"
+                    print(f"[INFO] Model moved to CUDA")
+                except (NotImplementedError, RuntimeError, Exception) as e:
+                    error_msg = str(e).lower()
+                    if "meta tensor" in error_msg or "to_empty" in error_msg:
+                        print(f"[WARNING] Could not move model to CUDA (meta tensor issue), keeping on CPU")
+                        self.device = "cpu"
+                    else:
+                        # For other errors, log but keep on CPU
+                        print(f"[WARNING] Could not move model to CUDA: {e}, keeping on CPU")
+                        self.device = "cpu"
             
             print(f"[INFO] Model loaded successfully on {self.device}")
             

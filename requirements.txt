@@ -12,6 +12,8 @@ accelerate>=0.24.0
 # Voice features
 gtts>=2.4.0
 pydub>=0.25.1
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.11
 
 # Utilities
 requests>=2.31.0
