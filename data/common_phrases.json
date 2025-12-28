@@ -12,11 +12,29 @@
       "luo": "Oyawore",
       "kikuyu": "Wendo wa rũcinĩ"
     },
-     {
+    {
       "english": "Good evening",
       "swahili": "Habari za jioni",
       "luo": "Oimore",
-      "kikuyu": " "
+      "kikuyu": "Úhoro wa húainí"
+    },
+    {
+      "english": "Good afternoon",
+      "swahili": "Habari za mchana",
+      "luo": "Oywak maber",
+      "kikuyu": "Wendo wa mũthenya"
+    },
+    {
+      "english": "Goodbye",
+      "swahili": "Kwaheri",
+      "luo": "Oriti",
+      "kikuyu": "Tigwo na ũgĩ"
+    },
+    {
+      "english": "See you later",
+      "swahili": "Tutaonana baadaye",
+      "luo": "Waneno bang'e",
+      "kikuyu": "Tũkonana rĩngĩ"
     }
   ],
   "common": [
@@ -31,6 +49,84 @@
       "swahili": "Habari yako?",
       "luo": "Idhi nade?",
       "kikuyu": "ũrĩ atĩa?"
+    },
+    {
+      "english": "I'm fine",
+      "swahili": "Niko sawa",
+      "luo": "Adhi maber",
+      "kikuyu": "Ndĩ mwega"
+    },
+    {
+      "english": "Please",
+      "swahili": "Tafadhali",
+      "luo": "Kiyie",
+      "kikuyu": "Ndagũthaitha"
+    },
+    {
+      "english": "Sorry/Excuse me",
+      "swahili": "Samahani",
+      "luo": "Wechna",
+      "kikuyu": "Ngũhooya ũnjĩkĩre"
+    },
+    {
+      "english": "Yes",
+      "swahili": "Ndiyo",
+      "luo": "Ee",
+      "kikuyu": "Ĩĩ"
+    },
+    {
+      "english": "No",
+      "swahili": "Hapana",
+      "luo": "Ooyo",
+      "kikuyu": "Aca"
+    },
+    {
+      "english": "What is your name?",
+      "swahili": "Jina lako ni nani?",
+      "luo": "Nyingi mane?",
+      "kikuyu": "Wĩtagwo atĩa?"
+    },
+    {
+      "english": "My name is...",
+      "swahili": "Jina langu ni...",
+      "luo": "Nyinga e...",
+      "kikuyu": "Njĩtagwo..."
+    },
+    {
+      "english": "Welcome",
+      "swahili": "Karibu",
+      "luo": "Imor",
+      "kikuyu": "Wamũkĩra"
+    },
+    {
+      "english": "I don't understand",
+      "swahili": "Sielewi",
+      "luo": "Ok awinjo",
+      "kikuyu": "Ndirĩ ũmenyo"
+    },
+    {
+      "english": "Help me",
+      "swahili": "Nisaidie",
+      "luo": "Konya",
+      "kikuyu": "Ndeithia"
+    },
+    {
+      "english": "I love you",
+      "swahili": "Nakupenda",
+      "luo": "Aheri",
+      "kikuyu": "Nĩngwendete"
+    },
+    {
+      "english": "Where is...?",
+      "swahili": "...iko wapi?",
+      "luo": "...ni kanye?",
+      "kikuyu": "...kũrĩ ha?"
+    },
+    {
+      "english": "How much?",
+      "swahili": "Bei gani?",
+      "luo": "Adi?",
+      "kikuyu": "Nĩ thogora ũrĩkũ?"
     }
   ]
 }

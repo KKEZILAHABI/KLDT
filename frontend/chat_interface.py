@@ -33,21 +33,21 @@ def render_chat(translator, source_lang, target_lang, voice_service):
         st.session_state.messages = []
     
     # Display chat messages
-    for message in st.session_state.messages:
+    for idx, message in enumerate(st.session_state.messages):
         with st.chat_message(message["role"]):
             st.write(message["content"])
             if message.get("translation"):
                 st.caption(f"→ {message['translation']}")
-                
+
                 # Add speaker button for voice output (on-demand, not auto-play)
                 if voice_service.is_enabled() and message["role"] == "assistant":
                     if st.button(
-                        "🔊 Listen", 
-                        key=f"speak_{message.get('id', 0)}",
+                        "🔊 Listen",
+                        key=f"speak_{idx}",
                         help="Click to hear pronunciation"
                     ):
                         voice_service.speak(
-                            message['translation'], 
+                            message['translation'],
                             target_lang
                         )
     
